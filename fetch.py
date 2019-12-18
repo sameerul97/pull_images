@@ -15,7 +15,7 @@ def getAllLinks(rootLink):
         content = requests.get(rootLink)
         soup = BeautifulSoup(content.text,"html.parser")
     except requests.ConnectionError:
-        print("failed to connect")
+        print("Failed to connect")
 
     for link in soup.find_all('a'):
         link = 'http://creative.bauermedia.co.uk/'+link.get('href')
@@ -25,10 +25,13 @@ def checkValidURLs(temp_links):
     for i in temp_links:
         try:
             response = requests.get(i)
-            print(response.status_code)
-            if response.status_code == 200 : Page_Urls['URLs'].append(i)
+            if response.status_code == 200 : 
+                Page_Urls['URLs'].append(i)
+                print(response, response.status_code, "ロ")
+            else:
+                print(response, response.status_code, "✖")
         except requests.ConnectionError:
-            print("failed to connect")
+            print("Failed to connect")
  
 def createJSON(urls):
     print(urls)

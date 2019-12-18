@@ -1,14 +1,13 @@
 //  Purpose: Resize all the screenshots programatically 
-
 var sharp = require('sharp');
-const imageFolder = './testFolder/';
+const imageFolder = './images/';
 var blurryFolder = './resized/';
 const fs = require('fs');
 fs.readdirSync(imageFolder).forEach(file => {
     console.log(file);
     if (!fs.existsSync(blurryFolder)) {
         fs.mkdirSync(blurryFolder);
-        sharp("./testFolder/" + file)
+        sharp("./images/" + file)
             .resize(780, null)
             .jpeg({
                 quality: 50,
@@ -16,7 +15,7 @@ fs.readdirSync(imageFolder).forEach(file => {
             })
             .toFile(blurryFolder + file, function(err) {});
     } else {
-        sharp("./testFolder/" + file)
+        sharp("./images/" + file)
             .resize(780, null)
             .jpeg({
                 quality: 50,
