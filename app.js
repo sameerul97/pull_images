@@ -1,3 +1,4 @@
+//  Purpose: Progrmatically initiase Chromium browser and take screenshot for each creative page
 const fs = require('fs');
 // const url = require('url');
 let rawdata = fs.readFileSync('URL_Data2.json');
