@@ -6,6 +6,7 @@
 node_modules/
 history/
 images/
+resized/
 *.jpg\n*.jpeg\n*.png\n*.gif\n
 URL_Data2.json
 URL_Data.json
