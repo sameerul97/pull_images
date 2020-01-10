@@ -1,3 +1,21 @@
+# # See http://help.github.com/ignore-files/ for more about ignoring files.
+# .node_modules/
+# .history/
+# .vscode/
+# # dependencies
+# node_modules/
+# history/
+# images/
+# resized/
+# renamed/
+# blurred/
+# *.jpg\n*.jpeg\n*.png\n*.gif\n
+# URL_Data2.json
+# URL_Data.json
+# URL_Data.json
+# nodejs_scripts/pull_images
+ node_modules
+node_modules
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 .node_modules/
 .history/
@@ -13,4 +31,8 @@ blurred/
 URL_Data2.json
 URL_Data.json
 URL_Data.json
- 
+blurred_for_web/
+blurred_renamed/
+resized_for_web/
+temp/
+testImages/

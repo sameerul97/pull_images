@@ -9,6 +9,8 @@
     "author": "Sameer",
     "license": "ISC",
     "dependencies": {
+        "async": "^3.1.0",
+        "node-fetch": "^2.6.0",
         "puppeteer": "^2.0.0",
         "sharp": "^0.23.4"
     }

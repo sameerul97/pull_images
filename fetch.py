@@ -27,9 +27,9 @@ def checkValidURLs(temp_links):
             response = requests.get(i)
             if response.status_code == 200 : 
                 Page_Urls['URLs'].append(i)
-                print(response, response.status_code, "ロ")
+                print(response, response.status_code, "OK")
             else:
-                print(response, response.status_code, "✖")
+                print(response, response.status_code, "X")
         except requests.ConnectionError:
             print("Failed to connect")
  
